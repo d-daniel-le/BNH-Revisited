@@ -1,0 +1,53 @@
+body{
+    background-color: #355e3b;
+    font-family: "Permanent Marker";
+}
+p, h1{
+    text-align: center;
+}
+
+h1{
+    background-color: #414652;
+    color: white;
+    width: 30%;
+    margin-left: 34%;
+    padding: 1%;
+}
+
+#invalid-entry{
+    background-color: #4A0404;
+    color: white;
+    width: 20%;
+    margin-left: 40%;
+    padding: 1%;
+}
+
+#play-again{
+    background-color: #4A0404;
+    color: white;
+    width: 20%;
+    margin-left: 40%;
+    padding: 1%;
+}
+
+#user-results{
+    background-color: #414652;
+    color: white;
+    width: 20%;
+    margin-left: 40%;
+    padding: 1%;
+}
+#computer-results{
+    background-color: #634f40;
+    color: white;
+    width: 20%;
+    margin-left: 40%;
+    padding: 1%;
+}
+#results{
+    background-color: #FF6700;
+    color: white;
+    width: 20%;
+    margin-left: 40%;
+    padding: 1%;
+}
