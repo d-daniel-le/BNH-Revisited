@@ -8,226 +8,52 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Lexend+Deca&family=Comme">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
-    <script>
-        // Welcome Prompt
-        let username;
-        let userCharacter;
-
-        // Computer Choice
-        const compCharacter = ['Bear', 'Ninja','Hunter'];
-
-        // Initialize Random
-        let compRandChoice;
-        let anotherTime = 'yes';
-        let results = '';
-
-        let invalidUserInput;
-        let validUsername = false;
-        let validChoose = false;
-        let validChoice = false;
-        
-        username = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
-
-       
-    </script>
-
     <title>JavaScript Game: Bear Ninja Hunter</title>
   </head>
   <body>
-    <h1>JavaScript Game: Bear Ninja Hunter</h1>
-    <p id="invalid-entry"></p>
-    <p id="play-again"></p>
-    <p id="user-results"></p>
-    <p id="computer-results"></p>
-    <p id="results"></p>
+    <div class="content-container" id="head-container">
+      <h2>Bear, Ninja, Hunter</h2>
+      <p>Play against the computer!</p>
+    </div>
 
-    <script>
-      do{
-        // reset some variable each game is played
-        validChoose = false;
-        results = '';
-        invalidUserInput = '';
-        validChoice = false;
+    <div class="content-container" id="rule-container">
+      <br>
+      <ul>
+        <li>The Bear beats the Hunter</li>
+        <li>The Hunter beats the Ninja</li>
+        <li>And the Ninja beats the Bear.</li>
+      </ul>
+      <br>
+    </div>
 
-        // Tell user to restart when they either press cancel or an empty string
-        if (username === null){
-          alert('Please Press F5 to Play Again.');
-          document.getElementById('play-again').innerHTML = 'Please Press F5 to Play Again.';
-          console.log('Please Press F5 to Play Again.');
-          break;
-        }
-        else if (username.trim() === ''){
-          alert('Please Press F5 to Play Again.');
-          document.getElementById('play-again').innerHTML = 'Please Press F5 to Play Again.';
-          console.log('Please Press F5 to Play Again.');
-          break;
-        }
+    <p>Click a button below to select your choice.</p>
+    <hr>
+    <div class="content-container" id="button-container">
+      
+      <button onclick="bear()" id="bear">Bear</button>
+      <button onclick="ninja()" id="ninja">Ninja</button>
+      <button onclick="hunter()" id="hunter">Hunter</button>
+      
+    </div>
+    <hr>
+    <div class="results" id="current-results" hidden>
+      <div class="content-container" id="output-container">
+        <p id="user-results"></p>
+        <p id="computer-results"></p>
+        <p id="results"></p>
+      </div>
 
-        // Otherwise, greet the user through the alert
-
-        else{
-          alert('Hi ' + username + ' Let\'s play!!');
-        }
-
-        // Prompt user choose charater
-        userCharacter = prompt('Who are you: Bear, Ninja, or Hunter?');
-
-        // Compare choice through the Array
-        for(let i = 0; i< compCharacter.length; i++){
-          if (userCharacter !== null && userCharacter.toLowerCase() === compCharacter[i].toLowerCase()){
-            validChoice = true
-          }
-          else{
-            validChoice = validChoice
-          }
-        }
-
-        // Handle wrong user input if the user decides to hit cancel
-        if (userCharacter === null || userCharacter.trim() === ''){
-          alert('Invalid Entry\n' +
-                'Please Press F5 to Play Again.')
-          document.getElementById('invalid-entry').innerHTML = 'Invalid Entry';
-          console.log('Invalid Entry');
-          document.getElementById('play-again').innerHTML = 'Please Press F5 to Play Again.';
-          console.log('Please Press F5 to Play Again.');
-          break;
-        }
-        // Handle wrong user input if the user puts in a wrong input that doesn't match with the predefined characters
-        else if (validChoice !== true){
-          alert('Invalid Entry\n' +
-          'Please Press F5 to Play Again.')
-          document.getElementById('invalid-entry').innerHTML = 'Invalid Entry';
-          console.log('Invalid Entry');
-          document.getElementById('play-again').innerHTML = 'Please Press F5 to Play Again.';
-          console.log('Please Press F5 to Play Again.');
-          break;
-        }
-
-        else{
-          console.log(username + ', You chose ' + userCharacter);
-        }
-        // Generate Random Number
-        compRandChoice = Math.floor(Math.random() * compCharacter.length);
-        console.log(`The computer chose ${compCharacter[compRandChoice]}!`);
-
-        // Determine results when user input 'Bear'
-        if (userCharacter.toLowerCase() === 'bear'){
-          switch (compCharacter[compRandChoice].toLowerCase()){
-            case 'bear':
-              results = 'You Tie!!';
-              document.getElementById('results').innerHTML = 'You Tie!!';
-              console.log('You Tie!!');
-              break;
-            case 'ninja':
-              results = 'You Win!!';
-              document.getElementById('results').innerHTML = 'You Win!!';
-              console.log('You Win!!');
-              break;
-            case 'hunter':
-              results = 'Computer Wins!!';
-              document.getElementById('results').innerHTML = 'Computer Wins!!';
-              console.log('Computer Wins!!');
-              break;
-            default:
-              results = 'Invalid Character from Computer!!';
-              document.getElementById('results').innerHTML = 'Invalid Character from Computer!!';
-              console.log('Invalid Character from Computer!!');
-              break;
-          }
-        }
-        // Determine results when user input 'Ninja'
-        else if (userCharacter.toLowerCase() === 'ninja'){
-          switch (compCharacter[compRandChoice].toLowerCase()){
-            case 'bear':
-              results = 'Computer Wins!!';
-              document.getElementById('results').innerHTML = 'Computer Wins!!';
-              console.log('Computer Wins!!');
-              break;
-            case 'ninja':
-              results = 'You Tie!!';
-              document.getElementById('results').innerHTML = 'You Tie!!';
-              console.log('You Tie!!');
-              break;
-            case 'hunter':
-              results = 'You Win!!';
-              document.getElementById('results').innerHTML = 'You Win!!';
-              console.log('You Win!!');
-              break;
-            default:
-              results = 'Invalid Character from Computer!!';
-              document.getElementById('results').innerHTML = 'Invalid Character from Computer!!';
-              console.log('Invalid Character from Computer!!');
-            break;
-          }
-        }
-
-        // Determine results when user input 'Hunter'
-        else if (userCharacter.toLowerCase() === 'hunter'){
-          switch (compCharacter[compRandChoice].toLowerCase()){
-            case 'bear':
-              results = 'You Win!!';
-              document.getElementById('results').innerHTML = 'You Win!!';
-              console.log('You Win!!');
-              break;
-            case 'ninja':
-              results = 'Computer Wins!!';
-              document.getElementById('results').innerHTML = 'Computer Wins!!';
-              console.log('Computer Wins!!');
-              break;
-            case 'hunter':
-              results = 'You Tie!!';
-              document.getElementById('results').innerHTML = 'You Tie!!';
-              console.log('You Tie!!');
-              break;
-            default:
-              results = 'Invalid Character from Computer!!';
-              document.getElementById('results').innerHTML = 'Invalid Character from Computer!!';
-              console.log('Invalid Character from Computer!!');
-            break;
-          }
-        }
-
-        // Let the user know that their input was invalid
-        else{
-          invalidUserInput = 'Invalid Character Input. Too Bad!!';
-          document.getElementById('results').innerHTML = 'Invalid Character Input. Too Bad!!';
-          console.log('Invalid Character Input. Too Bad!!');
-        }
-
-        compCharacter.forEach(character =>{
-          if(userCharacter.toLowerCase() === character.toLowerCase()){
-            validChoose = true;
-          }
-          else{
-            validChoose = validChoose;
-          }
-        })
-
-        // print out the results through alert whether they win or not or something happens
-        if (validChoose === true){
-
-          alert(username + ", You picked " + userCharacter + "!\n" +
-          "The computer picked " + compCharacter[compRandChoice] + "!\n" +
-          results)
-
-        }
-
-        else{
-          alert(username + ", You picked " + userCharacter + "!\n" +
-          "The computer picked " + compCharacter[compRandChoice] + "!\n" +
-          invalidUserInput)
-        }
-
-        //Print results to HTML page and console
-        document.getElementById('user-results').innerHTML = username +', You chose '+ userCharacter + '!'; 
-
-        document.getElementById('computer-results').innerHTML = 'The computer chose ' + compCharacter[compRandChoice] + '!';
-
-        // Ask user if they want to play again
-        anotherTime = prompt(`${username}, would you like to play again, Yes or No?`);
-        
-      } while (anotherTime !== null && anotherTime.toLowerCase() === 'yes');
-
-    </script>
+      <div class="content-container" id="who-win">
+        <p id="user-win-counts"></p>
+        <p id="comp-win-counts"></p>
+      </div>
+      
+      <div class="content-container">
+        <hr>
+        <button id="play-again">Play Again?</button>
+        <hr>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
  </body>
 </html>
