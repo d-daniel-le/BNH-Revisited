@@ -34,7 +34,7 @@ document.getElementById('hunter').addEventListener("click", function click() {
     if (compCharacter[compRandChoice].toLowerCase() === 'bear'){
       document.getElementById('user-results').innerHTML = 'You chose Bear';
       document.getElementById('computer-results').innerHTML = `The Computer chose ${compCharacter[compRandChoice]}`;
-      document.getElementById('results').innerHTML = 'You tie';
+      document.getElementById('results').innerHTML = 'You tie!';
       document.getElementById('user-win-counts').innerHTML = `Your Wins: ${userWinCount}`
       document.getElementById('comp-win-counts').innerHTML = `Computer Wins: ${compWinCount}`
     }
@@ -67,7 +67,7 @@ document.getElementById('hunter').addEventListener("click", function click() {
     if (compCharacter[compRandChoice].toLowerCase() === 'ninja'){
       document.getElementById('user-results').innerHTML = 'You chose Ninja';
       document.getElementById('computer-results').innerHTML = `The Computer chose ${compCharacter[compRandChoice]}`;
-      document.getElementById('results').innerHTML = 'You tie';
+      document.getElementById('results').innerHTML = 'You tie!';
       document.getElementById('user-win-counts').innerHTML = `Your Wins: ${userWinCount}`
       document.getElementById('comp-win-counts').innerHTML = `Computer Wins: ${compWinCount}`
     }
@@ -100,7 +100,7 @@ document.getElementById('hunter').addEventListener("click", function click() {
     if (compCharacter[compRandChoice].toLowerCase() === 'hunter'){
       document.getElementById('user-results').innerHTML = 'You chose hunter';
       document.getElementById('computer-results').innerHTML = `The Computer chose ${compCharacter[compRandChoice]}`;
-      document.getElementById('results').innerHTML = 'You tie';
+      document.getElementById('results').innerHTML = 'You tie!';
       document.getElementById('user-win-counts').innerHTML = `Your Wins: ${userWinCount}`
       document.getElementById('comp-win-counts').innerHTML = `Computer Wins: ${compWinCount}`
     }
