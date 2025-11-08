@@ -11,31 +11,33 @@
     <title>JavaScript Game: Bear Ninja Hunter</title>
   </head>
   <body>
-    <div class="content-container" id="head-container">
-      <h2>Bear, Ninja, Hunter</h2>
-      <p>Play against the computer!</p>
+    <div class="initial-page">
+      <div class="content-container" id="head-container">
+        <h2>Bear, Ninja, Hunter</h2>
+        <p>Play against the computer!</p>
+      </div>
+  
+      <div class="content-container" id="rule-container">
+        <br>
+        <ul>
+          <li>The Bear beats the Hunter</li>
+          <li>The Hunter beats the Ninja</li>
+          <li>And the Ninja beats the Bear.</li>
+        </ul>
+        <br>
+      </div>
+  
+      <p>Click a button below to select your choice.</p>
+      <hr>
+      <div class="content-container" id="button-container">
+        
+        <button id="bear">Bear</button>
+        <button id="ninja">Ninja</button>
+        <button id="hunter">Hunter</button>
+        
+      </div>
+      <hr>
     </div>
-
-    <div class="content-container" id="rule-container">
-      <br>
-      <ul>
-        <li>The Bear beats the Hunter</li>
-        <li>The Hunter beats the Ninja</li>
-        <li>And the Ninja beats the Bear.</li>
-      </ul>
-      <br>
-    </div>
-
-    <p>Click a button below to select your choice.</p>
-    <hr>
-    <div class="content-container" id="button-container">
-      
-      <button id="bear">Bear</button>
-      <button id="ninja">Ninja</button>
-      <button id="hunter">Hunter</button>
-      
-    </div>
-    <hr>
     <div class="results" id="current-results" hidden>
       <div class="content-container" id="output-container">
         <p id="user-results"></p>

@@ -1,5 +1,15 @@
 body{
+    background-color: #355e3b;
     font-weight: lighter;
+}
+
+.initial-page{
+    background-color: #414652;
+    width: 40%;
+    margin-left: 30%;
+    color: aliceblue;
+    padding-bottom: 2%;
+    font-family: "Lexend Deca";
 }
 
 p{
@@ -16,7 +26,7 @@ p{
 }
 
 #rule-container{
-    margin-left: 43%;
+    margin-left: 31%;
 }
 
 #button-container{
@@ -24,29 +34,48 @@ p{
     flex-direction: row;
     gap: 20px;
     text-align: center;
-    margin-left: 45%;
+    margin-left: 32.5%;
 }
 
 button{
-    width: 5%;
+    width: 15%;
     text-align: center;
     padding: 0;
+    border: none;
+    border-radius: 10px;
+    padding: 1%;
+    font-family: "Comme";
 }
+
+button:hover{
+    background-color: #4A0404;
+    color: aliceblue;
+}
+
 hr{
-    width: 15%;
+    width: 40%;
 }
 
 #play-again{
-    margin-left: 48%;
+    margin-left: 43%;
+}
+
+.results{
+    margin-top: 2%;
+    margin-left: 30%;
+    padding-top: 2%;
+    background-color: #414652;
+    width: 40%;
 }
 
 #output-container{
-    margin-left: 43.5%;
-    width:13%;
+    margin-left: 32.5%;
+    width: 35%;
     border: 2px solid #634f40;
     background-color: #634f40;
     color: aliceblue;
     font-weight: bold;
+    font-family: "Permanent Marker";
 }
 
 #output-container p{
@@ -54,6 +83,13 @@ hr{
     margin-left: 5%;
 }
 
+#who-win{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 #who-win p{
     margin: 0;
+    color: aliceblue;
+    font-family: "Lexend Deca";
 }
